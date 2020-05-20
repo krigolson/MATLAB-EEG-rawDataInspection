@@ -78,8 +78,8 @@ function doRawDataInspection(EEG)
     txt1 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom 200 20],'String',message1,'HorizontalAlignment','left');
     %txt2 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+20 200 20],'String',message2,'HorizontalAlignment','left');
     %txt3 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+40 200 20],'String',message3,'HorizontalAlignment','left');
-    txt4 = uicontrol('Style','text','Position',[scrsz(3)-825 bottom+60 200 20],'String',message4,'HorizontalAlignment','left');
-    txt5 = uicontrol('Style','text','Position',[scrsz(3)-825 bottom+80 200 20],'String',message5,'HorizontalAlignment','left');
+    txt4 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+60 200 20],'String',message4,'HorizontalAlignment','left');
+    txt5 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+80 200 20],'String',message5,'HorizontalAlignment','left');
     txt6 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+100 200 20],'String',message6,'HorizontalAlignment','left');
     txt7 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+120 200 20],'String',message7,'HorizontalAlignment','left');
     txt8 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom+140 200 20],'String',message8,'HorizontalAlignment','left');
@@ -132,7 +132,7 @@ function doRawDataInspection(EEG)
         % imagesc plots of artifacts
         f3 = subplot_tight(3,2,3,[0.05 0.05],'Parent',fig1);
         cla(f3);
-        imagesc(OUTEEG.artifact(2).artifactSize',[0 EEG.artifactCriteriaGradient]);
+        imagesc(OUTEEG.artifact(2).artiGradientSize',[0 EEG.artifactCriteriaGradient]);
         xticks([1:1:length(EEG.chanlocs)]);
         xtickangle(90);
         set(f3,'xticklabel',EEG.labels);
@@ -142,7 +142,7 @@ function doRawDataInspection(EEG)
         % imagesc plots of artifacts
         f4 = subplot_tight(3,2,4,[0.05 0.05],'Parent',fig1);
         cla(f4);
-        imagesc(OUTEEG.artifact(1).artifactSize',[0 EEG.artifactCriteriaDifference]);
+        imagesc(OUTEEG.artifactDifferenceSize',[0 EEG.artifactCriteriaDifference]);
         xticks([1:1:length(EEG.chanlocs)]);
         xtickangle(90);
         set(f4,'xticklabel',EEG.labels);
