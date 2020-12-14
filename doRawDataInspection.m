@@ -71,8 +71,7 @@ function doRawDataInspection(EEG)
     btn7 = uicontrol('Style','pushbutton', 'String', 'Epoch Window','Position',[scrsz(3)-200 bottom+75 100 20],'Callback',@setEpochWindow);
     btn8 = uicontrol('Style','pushbutton', 'String', 'Artifact Criteria','Position',[scrsz(3)-200 bottom+100 100 20],'Callback',@setArtifactCriteria);
     %btn9 = uicontrol('Style','togglebutton', 'String', 'ICA','Position',[scrsz(3)-200 bottom+175 100 20],'Callback',@doICA);
-    
-    
+      
     btn6 = uicontrol('Style', 'listbox','Position',[scrsz(3)-600 bottom 100 100],'string',listboxAllMarkers,'Max',length(listboxAllMarkers),'Min',1,'Callback',@selectMarkers);
 
     txt1 = uicontrol('Style','text','Position',[scrsz(3)-425 bottom 200 20],'String',message1,'HorizontalAlignment','left');
